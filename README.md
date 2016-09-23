@@ -5,8 +5,9 @@ This project has for purpose to hands-on PHPUnit testing framework and to testin
 The **master** branch hold nothing, every exercise is in its own branch.
 
 ## Getting started
-	- clone or download + extract the project
-	- fetch target branch (exercise) from _origin_ by running
+	- clone the project and go into the folder "phpunit-exercises"
+	- run "git fetch origin" to update your local repository
+	- checkout exercise branch by running "git checkout refactoring/mapper"
 	- in root folder, download composer.phar
 	- in the command line, run "php composer.phar install"
 	- in the command line, run "phpunit" to launch the test suite
