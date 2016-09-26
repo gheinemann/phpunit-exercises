@@ -10,7 +10,7 @@ The **master** branch hold nothing, every exercise is in its own branch.
 	- checkout exercise branch by running "git checkout refactoring/mapper"
 	- in root folder, download composer.phar
 	- in the command line, run "php composer.phar install"
-	- in the command line, run "phpunit" to launch the test suite
+	- in the command line, run "vendor/bin/phpunit" to launch the test suite
 
 ## Goal
 	- we would like to cover our class Mapper with tests
