@@ -160,6 +160,13 @@ namespace tools {
 
         static private $convmap = array(0x80, 0xff, 0, 0xff);
 
+        public static function mapTitle($pTitle) {
+            if (array_key_exists($pTitle, self::$gender_table)) {
+                $pTitle = self::$gender_table[$pTitle];
+            }
+            return $pTitle;
+        }
+
         public static function mapData($pRppsData) {
             if (!is_array($pRppsData) || empty($pRppsData)) {
                 return null;
@@ -215,7 +222,7 @@ namespace tools {
             }
 
             // if profession is PHARMACIEN, determine exercise mode
-            if ($datas['profession_id'] == 2) {
+            if (isset($datas['profession_id']) && $datas['profession_id'] == 2) {
                 switch($pRppsData['exerciseMode']) {
                     case "S":
                         $datas['exerciseModePharma_id'] = 2;
